@@ -77,7 +77,7 @@ function squareRoot(num){
    });
    return result;
 }
-console.log(squareRoot([25]));
+//console.log(squareRoot([25]));
 
 //Question 4
 
@@ -93,7 +93,7 @@ function objectSquare (obj){
     return result;
 }
 
-console.log(objectSquare(obj1))
+//console.log(objectSquare(obj1))
 
 //Question 5
 function operationMaker (operation) {
@@ -128,4 +128,4 @@ var difference = substract(10,7);
 var divide = operationMaker("div");
 var ratio = divide(10,5);
 
-console.log(sum, product, difference, ratio)
+//console.log(sum, product, difference, ratio)
