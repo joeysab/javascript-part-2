@@ -96,3 +96,36 @@ function objectSquare (obj){
 console.log(objectSquare(obj1))
 
 //Question 5
+function operationMaker (operation) {
+    if (operation === "add"){
+        return function(a,b){
+            return a+b;
+        }
+    }else if (operation === "substract"){
+        return function(a,b){
+            return a-b;
+        }
+    }else if(operation === "mult"){
+        return function(a,b){
+            return a * b;
+        }
+    }else if(operation === "div"){
+        return function(a,b){
+            return a/b;
+        }
+    }
+};
+
+var adder = operationMaker("add");
+var sum = adder(5, 10); 
+
+var multiplier = operationMaker("mult");
+var product = multiplier(5, 10);
+
+var substract = operationMaker("substract");
+var difference = substract(10,7);
+
+var divide = operationMaker("div");
+var ratio = divide(10,5);
+
+console.log(sum, product, difference, ratio)
