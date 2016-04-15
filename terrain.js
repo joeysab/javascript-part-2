@@ -55,17 +55,23 @@ Tile.prototype = {
     }
 }
 
-var tile1 = new Tile(20,20);
 
 function displayGrid (){
     var mainArr=[];
     
-    for (var i=0; i<20; i++){
+    for (var i=0; i<=20; i++){
         var row = [];
-        for (var x= 0; x<20; x++){
-            Tile(x).push(row)
+        
+        for (var x= 0; x<=20; x++){
+            var tile = new Tile(i, x);
+            row.push(tile.height)
         }
+        mainArr.push(row);
+        
     }
     return mainArr
 }
-console.log(tile1)
+
+
+
+console.log(displayGrid())
