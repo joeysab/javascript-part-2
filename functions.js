@@ -22,22 +22,18 @@ function sortingArr(str1,str2, str3, str4){
 var arr = [
     {
         name: "Ziad",
-        email: "ziad@noemail.com"
+        email: "biad@noemail.com"
         
     },
     {
        name: "joseph",
-       email: "joseph@noemail.com"
+       email: "aoseph@noemail.com"
     }
     ];
     
-    var arrName =[]
-    for(var i = 0; i < arr.length; i++){
-        arrName.push(arr[i].name)
-    };
     
-var resultName = arrName.sort(function(a,b){
-    if (a.length< b.length){
+var resultName = arr.sort(function(a,b){
+    if (a.name.length< b.name.length){
         return 1;
         
     }else if (a.name < b.name) {
@@ -48,18 +44,15 @@ var resultName = arrName.sort(function(a,b){
     }
 });
 
+//console.log(resultName)
 
-var arrEmail = []
-for (var i = 0; i < arr.length; i++){
-    arrEmail.push(arr[i].email)
-};
 
-arrEmail.sort(function (a,b){
-        if (a > b){
-        return 1;
-        
-    }else if (a < b) {
+var resultEmail = arr.sort(function (a,b){
+        if (a.email < b.email){
         return -1;
+        
+    }else if (a.email > b.email) {
+        return 1;
         
     } else {
         return 0;
@@ -67,8 +60,7 @@ arrEmail.sort(function (a,b){
 });
 
 
-//console.log(arrName);
-//console.log(arrEmail)
+console.log(resultEmail)
 
 //Question 3
 function squareRoot(num){
